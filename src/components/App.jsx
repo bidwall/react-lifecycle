@@ -30,10 +30,13 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>React Lifecyle</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/components/App.jsx</code> and save to reload.
+          This application looks at lifecycle events which are in <code>src/components/App.jsx</code>.
+        </p>
+        <p className="App-intro">
+          Press <code>F12</code> and view console logs.
         </p>
       </div>
     );
