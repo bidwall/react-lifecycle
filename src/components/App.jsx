@@ -46,17 +46,18 @@ class App extends Component {
     console.log("componentDidMount - component HAS been rendered to the DOM");
   }
 
-
+  componentWillUnmount() {
+    console.log("componentWillUnmount - invoked immediately before a component is unmounted and destroyed");
+  }
 
   componentWillReceiveProps(nexpProps) {
     console.log("componentWillReceiveProps - invoked before a mounted component receives new props");
   }
 
-  
-
   componentDidUpdate() {
     console.log("componentDidUpdate - invoked immediately after updating occurs");
   }
+  
 
 }
 
