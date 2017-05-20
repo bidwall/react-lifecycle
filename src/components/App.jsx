@@ -3,6 +3,15 @@ import logo from '../logo.svg';
 import './App.css';
 
 class App extends Component {
+  
+  componentWillMount() {
+    console.log("componentWillMount - component WILL be rendered to the DOM");
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount - component HAS been rendered to the DOM");
+  }  
+
   render() {
     return (
       <div className="App">
