@@ -5,8 +5,12 @@ import logo from '../logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    
+    this.state = {name: ''};
+    this.handleInputChange = this.handleInputChange.bind(this);
+
     console.log("constructor - call super (pass props if any) and set state");
   }
 
@@ -25,6 +29,10 @@ class App extends Component {
     console.log("componentWillUpdate -  invoked immediately before rendering when new props or state are being received");
   }
 
+  handleInputChange(input) {
+    this.setState({name: input});
+  }
+
   render() {
     console.log("render - i'll show you!");
 
@@ -40,8 +48,10 @@ class App extends Component {
         <p className="App-intro">
           Press <code>F12</code> to view logged lifecycle events in the console.
         </p>
-        <Input></Input>
-        <Display name={'Pal'}></Display>
+        <Input 
+          onInputChange={this.handleInputChange} />
+        <Display 
+          name={this.state.name} />
       </div>      
     );
   }
