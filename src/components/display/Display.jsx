@@ -1,10 +1,13 @@
 import React from 'react';
 
 class Display extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div>
-                Display something
+                Your name is {this.props.name}
             </div>
         );
     }

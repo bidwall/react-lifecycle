@@ -41,7 +41,7 @@ class App extends Component {
           Press <code>F12</code> to view logged lifecycle events in the console.
         </p>
         <Input></Input>
-        <Display></Display>
+        <Display name={'Pal'}></Display>
       </div>      
     );
   }
