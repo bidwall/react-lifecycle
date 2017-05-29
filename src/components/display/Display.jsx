@@ -2,9 +2,11 @@ import React from 'react';
 
 class Display extends React.Component {
     render() {
-        <div>
-            Display something
-        </div>
+        return (
+            <div>
+                Display something
+            </div>
+        );
     }
 }
 

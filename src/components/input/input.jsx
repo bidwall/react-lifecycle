@@ -2,8 +2,12 @@ import React from 'react';
 
 class Input extends React.Component {
     render() {
-        <div>
-            Input something
-        </div>
+        return (
+            <div>
+                Input something
+            </div>
+        );        
     }
 }
+
+export default Input;
