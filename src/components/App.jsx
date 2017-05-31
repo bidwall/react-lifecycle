@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
+import Input from './input/Input';
+import Display from './display/Display';
 import logo from '../logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    
+    this.state = {name: ''};
+    this.handleInputChange = this.handleInputChange.bind(this);
+
     console.log("constructor - call super (pass props if any) and set state");
   }
 
@@ -23,6 +29,10 @@ class App extends Component {
     console.log("componentWillUpdate -  invoked immediately before rendering when new props or state are being received");
   }
 
+  handleInputChange(input) {
+    this.setState({name: input});
+  }
+
   render() {
     console.log("render - i'll show you!");
 
@@ -30,15 +40,19 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>React Lifecyle</h2>
+          <h2>React Playground</h2>
         </div>
         <p className="App-intro">
-          This application looks at lifecycle events which are in <code>src/components/App.jsx</code>.
+          This application plays with different aspects of the React javascript library. Have a look in <code>src/components/App.jsx</code> for more information.
         </p>
         <p className="App-intro">
-          Press <code>F12</code> and view console logs.
+          Press <code>F12</code> to view logged lifecycle events in the console.
         </p>
-      </div>
+        <Input 
+          onInputChange={this.handleInputChange} />
+        <Display 
+          name={this.state.name} />
+      </div>      
     );
   }
 
